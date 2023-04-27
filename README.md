@@ -1,6 +1,17 @@
-# Serverless - AWS Node.js Typescript
+# serverless-typescript-template
 
-This project has been generated using the `serverless-typescript-template` template.
+An opinionated Serverless Framework template for TypeScript
+
+## Getting started
+
+There are two ways to get started using this template:
+1. Run the following command:
+   ```bash
+   npx serverless create -u https://github.com/ryanwalters/serverless-typescript-template -p <project-name>
+   ```
+2. Click "Use this template" and select either "Create a new repository" or "Open in a codespace"
+
+   ![image](https://user-images.githubusercontent.com/881783/235012375-7ced7c1f-ad8c-44b9-8378-d1f5b3d23762.png)
 
 ## Features
 
