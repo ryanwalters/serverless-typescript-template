@@ -1,0 +1,23 @@
+name: Generate Github Release
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  unit-tests:
+    uses: ./.github/workflows/reusable_unit_tests.yml
+  release:
+    needs:
+      - unit-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{secrets.BOT_GITHUB_TOKEN}}

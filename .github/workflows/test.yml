@@ -1,0 +1,10 @@
+name: Test
+
+on:
+  push:
+    branches-ignore:
+      - production
+
+jobs:
+  unit-tests:
+    uses: ./.github/workflows/reusable_unit_tests.yml

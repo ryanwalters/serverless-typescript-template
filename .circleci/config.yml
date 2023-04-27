@@ -1,0 +1,81 @@
+version: 2.1
+orbs:
+  aws-cli: circleci/aws-cli@3.1.4
+
+jobs:
+  build-and-deploy: &build-and-deploy
+    executor: aws-cli/default
+    steps:
+      - checkout
+      - aws-cli/install
+      - aws-cli/setup
+      - restore_cache:
+          keys:
+            - v2-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - save_cache:
+          paths:
+            - node_modules
+          key: v2-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Deploy application
+          command: npx serverless deploy --stage $CIRCLE_BRANCH
+
+  production-deploy:
+    <<: *build-and-deploy
+
+  dev-deploy:
+    <<: *build-and-deploy
+
+  qa-deploy:
+    <<: *build-and-deploy
+
+  unit-tests:
+    docker:
+      - image: cimg/base:2023.03
+    steps:
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Run tests
+          command: npm test
+
+workflows:
+  version: 2
+  all:
+    jobs:
+      - unit-tests:
+          filters:
+            branches:
+              only:
+                - dev
+                - qa
+                - production
+      - dev-deploy:
+          context: DevAWS
+          requires:
+            - unit-tests
+          filters:
+            branches:
+              only:
+                - dev
+      - qa-deploy:
+          context: QaAWS
+          requires:
+            - unit-tests
+          filters:
+            branches:
+              only:
+                - qa
+      - production-deploy:
+          context: ProdAWS
+          requires:
+            - unit-tests
+          filters:
+            branches:
+              only:
+                - production
