@@ -2,6 +2,14 @@
 
 An opinionated Serverless Framework template for TypeScript
 
+## Features
+
+- Automated deployments with [CircleCI](https://circleci.com/)
+- Automated GitHub releases with semantic versioning and changelog generation with [semantic-release](https://github.com/semantic-release/semantic-release)
+- Automated dependency updates with [Renovate](https://www.mend.io/renovate/)
+- Automated testing with [GitHub Actions](https://docs.github.com/en/actions)
+- Automated linting and formatting on commit with [Prettier](https://prettier.io/), [commitlint](https://commitlint.js.org/#/), and [husky](https://typicode.github.io/husky/)
+
 ## Getting started
 
 There are two ways to get started using this template:
@@ -15,14 +23,6 @@ There are two ways to get started using this template:
    ![image](https://user-images.githubusercontent.com/881783/235012375-7ced7c1f-ad8c-44b9-8378-d1f5b3d23762.png)
 
 > Don't forget to enable Renovate on your newly created repository!
-
-## Features
-
-- Automated deployments with [CircleCI](https://circleci.com/)
-- Automated GitHub releases with semantic versioning and changelog generation with [semantic-release](https://github.com/semantic-release/semantic-release)
-- Automated dependency updates with [Renovate](https://www.mend.io/renovate/)
-- Automated testing with [GitHub Actions](https://docs.github.com/en/actions)
-- Automated linting and formatting on commit with [Prettier](https://prettier.io/), [commitlint](https://commitlint.js.org/#/), and [husky](https://typicode.github.io/husky/)
 
 ## Installation/deployment instructions
 
