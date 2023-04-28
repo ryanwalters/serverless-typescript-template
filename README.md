@@ -22,7 +22,7 @@ There are two ways to get started using this template:
 
    ![image](https://user-images.githubusercontent.com/881783/235012375-7ced7c1f-ad8c-44b9-8378-d1f5b3d23762.png)
 
-> Don't forget to enable Renovate on your newly created repository!
+> **Note**: Don't forget to enable Renovate on your newly created repository!
 
 ## Installation/deployment instructions
 
