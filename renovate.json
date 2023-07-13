@@ -3,6 +3,7 @@
   "extends": ["config:base", "schedule:monthly"],
   "baseBranches": ["main"],
   "rangeStrategy": "pin",
+  "ignoreDeps": ["esbuild"],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin"],
