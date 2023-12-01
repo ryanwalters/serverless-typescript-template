@@ -12,8 +12,8 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@middy/core": "4.6.5",
-    "@middy/http-json-body-parser": "4.6.5"
+    "@middy/core": "4.7.0",
+    "@middy/http-json-body-parser": "4.7.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.8.1",
