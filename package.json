@@ -35,7 +35,7 @@
     "semantic-release": "24.2.0",
     "serverless": "3.39.0",
     "serverless-esbuild": "1.54.6",
-    "serverless-offline": "13.8.3",
+    "serverless-offline": "14.4.0",
     "ts-jest": "29.2.5",
     "ts-node": "10.9.2",
     "tsconfig-paths": "4.2.0",
