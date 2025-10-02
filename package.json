@@ -22,7 +22,7 @@
     "@semantic-release/git": "10.0.1",
     "@semantic-release/github": "11.0.6",
     "@semantic-release/release-notes-generator": "14.1.0",
-    "@serverless/typescript": "3.38.0",
+    "@serverless/typescript": "4.18.2",
     "@types/aws-lambda": "8.10.153",
     "@types/jest": "30.0.0",
     "@types/node": "22.18.8",
