@@ -33,7 +33,7 @@
     "lint-staged": "16.2.3",
     "prettier": "3.6.2",
     "semantic-release": "24.2.9",
-    "serverless": "3.40.0",
+    "serverless": "4.20.2",
     "serverless-esbuild": "1.55.1",
     "serverless-offline": "13.9.0",
     "ts-jest": "29.4.4",
